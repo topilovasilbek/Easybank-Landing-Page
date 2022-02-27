@@ -1,0 +1,52 @@
+.WhyChoose {
+    padding: 5rem 0;
+    background-color: var(--light-grayish-blue);
+
+    .container {
+        .title {
+            @include return-font("Public Sans", 400, normal, 2rem);
+            @media (max-width: $tablet-max) {
+                text-align: center;
+            }
+        }
+
+        .paragraph {
+            @include return-font("Public Sans", 400, normal, 1rem);
+            line-height: 1.5rem;
+            color: var(--grayish-blue);
+            width: 50%;
+            margin: 1rem 0;
+            @media (max-width: $tablet-max) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .row {
+            .col-lg-3 {
+                .top-part{
+                    margin-top: 2rem;
+                    @media (max-width: $tablet-max) {
+                        text-align: center;
+                    }
+                }
+                .middle-part {
+                    @include return-font("Public Sans", 400, normal, 1.5rem);
+                    margin: 1.5rem 0;
+                    @media (max-width: $tablet-max) {
+                        text-align: center;
+                    }
+                }
+
+                .bottom-part {
+                    @include return-font("Public Sans", 400, normal, 1rem);
+                    line-height: 1.5rem;
+                    color: var(--grayish-blue);
+                    @media (max-width: $tablet-max) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

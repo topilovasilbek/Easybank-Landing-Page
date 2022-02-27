@@ -1,0 +1,112 @@
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --lime-green1: hsl(136, 100%, 75%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --bright-cyan1: hsl(192, 100%, 75%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%)
+}
+
+$mobile-max: 576px;
+$tablet-min: 576px;
+$tablet-max: 992px;
+$pc-min: 992px;
+
+@mixin return-font($family, $weight, $style, $size) {
+  font: {
+    family: $family, sans-serif;
+    weight: $weight;
+    style: $style;
+    size: $size;
+  }
+}
+
+@mixin all-button {
+  background-image: linear-gradient(120deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+  border: none;
+  padding: 0.4rem 1.25rem;
+  border-radius: 1.1rem;
+  @include return-font("Public Sans", 400, normal, 1rem);
+  color: #fff;
+  position: relative;
+
+  .text {
+    position: relative;
+  }
+
+  .background {
+    position: absolute;
+    top: 37.5%;
+    left: 37.5%;
+    width: 25%;
+    height: 25%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-image: linear-gradient(120deg, var(--lime-green1) 0%, var(--bright-cyan1) 100%);
+    border-radius: 1.1rem;
+  }
+
+  &:hover {
+    .background {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+$initial-route-from-appCSS-to-images:"../images";
+
+
+#all-closer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; // Z-INDEX : 9999
+  display: none;
+  opacity: 0;
+}
+
+#loading {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; // Z-INDEX : 9999
+  display: none;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  font: {
+    size: 3rem;
+  }
+
+  ;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/*
+z-index: 999; - .Navbar
+z-index: 9999; - #all-closer
+z-index: 10000; - .Navbar .menu .box .container .inside-box
+*/

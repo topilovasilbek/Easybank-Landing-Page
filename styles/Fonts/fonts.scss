@@ -1,0 +1,20 @@
+$font-initial-route-from-appCSS-to-Fonts:"./Fonts";
+
+@font-face {
+    font-family: "Public Sans";
+    src: url($font-initial-route-from-appCSS-to-Fonts + "/Public_Sans/static/PublicSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Public Sans";
+    src: url($font-initial-route-from-appCSS-to-Fonts + "/Public_Sans/static/PublicSans-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Public Sans";
+    src: url($font-initial-route-from-appCSS-to-Fonts + "./Fonts/Public_Sans/static/PublicSans-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}

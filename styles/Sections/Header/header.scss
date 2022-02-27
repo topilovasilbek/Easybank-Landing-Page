@@ -1,0 +1,150 @@
+.Header {
+    background: {
+        color: #fafafa;
+        image: url($initial-route-from-appCSS-to-images + "/bg-intro-desktop.svg");
+        repeat: no-repeat;
+        size: 80%;
+        position-x: 200%;
+        position-y: 55%;
+    }
+
+    max-height: auto;
+
+    @media (max-width: $tablet-max) {
+        background: {
+            image: url($initial-route-from-appCSS-to-images + "/bg-intro-mobile.svg");
+            repeat: no-repeat;
+            size: 100% 50%;
+            position-x: 0;
+            position-y: 0;
+        }
+    }
+
+    .container {
+
+        .row {
+            @media (max-width: $tablet-max) {
+                flex-flow: column-reverse;
+            }
+
+            .col-12 {
+                margin: 0 auto;
+                .left-side {
+                    height: 90vh;
+                    display: flex;
+                    align-items: center;
+
+                    @media (max-width: $tablet-max) {
+                        height: auto;
+                        padding: 1rem 0 4rem 0;
+                    }
+
+                    .content {
+                        width: 100%;
+
+                        .title {
+                            @include return-font("Public Sans", 400, normal, 3rem);
+                            line-height: 3rem;
+
+                            @media (max-width: $tablet-max) {
+                                @include return-font("Public Sans", 400, normal, 2rem);
+                                line-height: 2rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .paragraph {
+                            @include return-font("Public Sans", 400, normal, 1rem);
+                            line-height: 1.5rem;
+                            margin: 2rem 0;
+                            color: var(--grayish-blue);
+
+                            @media (max-width: $tablet-max) {
+                                @include return-font("Public Sans", 300, normal, 1rem);
+                                line-height: 1rem;
+                                text-align: center;
+                            }
+
+                            @media (min-width: $tablet-max) {
+                                padding-right: 2rem;
+                            }
+                        }
+
+                        .button-div {
+                            @media (max-width: $tablet-max) {
+                                text-align: center;
+                            }
+
+                            button {
+                                @include all-button
+                            }
+                        }
+                    }
+                }
+
+                .right-side {
+                    height: 90vh;
+                    order: 2;
+                    overflow-y: none;
+
+                    img {
+                        width: 90%;
+                        position: relative;
+                        top: -20%;
+                        right: -25%;
+                    }
+
+                    @media (min-width: $pc-min) {
+                        margin-right: -45px;
+                    }
+
+                    @media (max-width: 500px) {
+                        height: 50vh;
+
+                        img {
+                            width: 50%;
+                            margin-left: 25%;
+                            position: relative;
+                            top: -25%;
+                            right: 0;
+                        }
+                    }
+
+                    @media (min-width: 501px) and (max-width: $mobile-max) {
+                        height: 50vh;
+
+                        img {
+                            width: 50%;
+                            margin-left: 25%;
+                            position: relative;
+                            top: -45%;
+                            right: 0;
+                        }
+                    }
+
+                    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+                        height: 70vh;
+
+                        img {
+                            width: 56%;
+                            margin-left: 22%;
+                            position: relative;
+                            top: -50%;
+                            right: 0;
+                        }
+                    }
+
+                    @media (min-width: $mobile-max) and (max-width: 767px) {
+                        height: 60vh;
+                    }
+                }
+            }
+
+            .col-lg-7 {
+                @media (min-width: $pc-min) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
