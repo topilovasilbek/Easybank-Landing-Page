@@ -14,7 +14,7 @@ $font-initial-route-from-appCSS-to-Fonts:"./Fonts";
 }
 @font-face {
     font-family: "Public Sans";
-    src: url($font-initial-route-from-appCSS-to-Fonts + "./Fonts/Public_Sans/static/PublicSans-Light.ttf");
+    src: url($font-initial-route-from-appCSS-to-Fonts + "/Public_Sans/static/PublicSans-Light.ttf");
     font-weight: 300;
     font-style: normal;
 }

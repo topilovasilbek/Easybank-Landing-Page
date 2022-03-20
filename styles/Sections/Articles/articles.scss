@@ -20,10 +20,14 @@
                     border-radius: 0.4rem;
                     cursor: pointer;
                     transition: 0.2s linear;
-                    &:hover{
-                        box-shadow: 0 1px 10px rgba($color: #000, $alpha: 0.3);
-                        .white-part{
-                            .artice-title{
+                    transition:.4s ease-in-out transform;
+
+                    &:hover {
+                        transform:
+                            translate3d(0px, -6px, 0px);
+
+                        .white-part {
+                            .artice-title {
                                 color: var(--lime-green);
                             }
                         }
@@ -31,7 +35,7 @@
 
                     .top-image {
                         img {
-                            width: 100%;
+                            width: 101%;
                             border-radius: 0.4rem 0.4rem 0 0;
                         }
                     }

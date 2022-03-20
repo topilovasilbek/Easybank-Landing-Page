@@ -1,3 +1,5 @@
+new WOW().init();
+
 let navbarHeight = document.querySelector('.Navbar').offsetHeight;
 
 /* document.querySelector('.Header').style.paddingTop = `${navbarHeight}px`; */
@@ -31,11 +33,10 @@ all_closer.addEventListener('click', function () {
     all_closer.style.display = "none";
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     header_up_menu.classList.add('d-block');
- }, false);
+}, false);
 
- window.onload = function() {
-     document.querySelector("#loading").display="flex"
- }
-
+window.onload = function () {
+    document.querySelector("#loading").display = "flex"
+}
