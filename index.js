@@ -23,8 +23,7 @@ btn.addEventListener('click', function () {
     }
 });
 header_up_menu.style.top = `${navbarHeight - 1}px`;
-// header_up_menu.style.height = `${vh100 - navbarHeight + 1}px`;
-header_up_menu.style.height = `${vh100 + 20}px`;
+header_up_menu.style.height = `${vh100 - navbarHeight + 1}px`;
 
 all_closer.addEventListener('click', function () {
     btn.classList.remove('active');
